@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: bitcamp1
-  Date: 2024-04-11
-  Time: 오후 2:06
+  Date: 2024-04-08
+  Time: 오후 12:50
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -11,10 +11,10 @@
     <title>Title</title>
 </head>
 <body>
-    <form action="/login" method="post">
-        <input type="text" name="mid"/>
-        <input type="text" name="mpw"/>
-        <button type="submit">로그인</button>
+    <form action="/todo/register" method="post">
+        <input type="text" name="title"/>
+        <input type="date" name="date"/>
+        <button type="submit">등록</button>
     </form>
 </body>
 </html>
