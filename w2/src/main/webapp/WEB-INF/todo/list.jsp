@@ -13,6 +13,8 @@
 </head>
 <body>
     <h1>List Page</h1>
+
+    <h2>${appName}</h2>
     <ul>
         <c:forEach var="dto" items="${list}">
             <li>
