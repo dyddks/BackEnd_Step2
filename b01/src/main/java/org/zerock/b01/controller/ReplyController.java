@@ -62,7 +62,7 @@ public class ReplyController {
     }
 
     @ApiOperation(value = "Delete Reply", notes = "Delete 방식으로 특정 댓글 삭제")
-    @GetMapping(value = "{rno}")
+    @DeleteMapping(value = "{rno}")
     public Map<String, Long> remove(@PathVariable("rno") Long rno){
         replyService.remove(rno);
         Map<String, Long> resultMap = new HashMap<>();
@@ -71,8 +71,8 @@ public class ReplyController {
     }
 
     @ApiOperation(value = "Modify Reply", notes = "PUT 방식으로 특정 댓글 수정")
-    @GetMapping(value = "{rno}")
-    public Map<String, Long> remove(@PathVariable("rno") Long rno, @RequestBody ReplyDTO replyDTO){
+    @PutMapping(value = "{rno}")
+    public Map<String, Long> modify(@PathVariable("rno") Long rno, @RequestBody ReplyDTO replyDTO){
         replyDTO.setRno(rno);
         replyService.modify(replyDTO);
         Map<String, Long> resultMap = new HashMap<>();
